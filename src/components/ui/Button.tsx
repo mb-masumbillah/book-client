@@ -3,12 +3,14 @@ import type { TButton } from "../../types";
 const Button = (children: TButton) => {
   const { name, onClick, className } = children;
 
+  console.log({className})
+
   return (
     <button
       className={
         className
           ? `${className} group relative overflow-hidden cursor-pointer`
-          : "group relative overflow-hidden px-4 py-1 rounded-full  font-semibold cursor-pointer border border-[#283541] bg-[#2b313d]"
+          : `group relative overflow-hidden px-4 py-1 rounded-full  font-semibold cursor-pointer border border-[#283541] bg-[#2b313d]`
       }
       onClick={onClick}
     >
