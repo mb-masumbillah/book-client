@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+
+
+@theme {
+    /* Light Theme */
+    --color-light-bg: #FFFFFF;
+    --color-light-text: #2E2E2E;
+    --color-light-card: #EEF0F3;
+    --color-light-button: #58C4DC;
+    --color-light-button-hover: #283541;
+    --color-light-border: #E0E0E0;
+    --color-light-muted-text: #7D7D7D;
+
+    /* Dark Theme */
+    --color-dark-bg: #23272E;
+    --color-dark-text: #F6F7F9;
+    --color-dark-card: #16181D;
+    --color-dark-card2: #1A1C22;
+    --color-dark-button: #58C4DC;
+    --color-dark-button-hover: #283541;
+    --color-dark-border: #3A3A3A;
+    --color-dark-muted-text: #AAAAAA;
+}
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+
+
+@layer base {
+    html {
+        @apply transition-colors duration-300
+    }
+
+    body {
+        @apply bg-white dark:bg-dark-bg text-light-text dark:text-dark-text
+    }
+}
