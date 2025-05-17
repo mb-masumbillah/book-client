@@ -27,9 +27,10 @@ const TopReadSellBooks = () => {
   ];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto py-10">
+   <div className="bg-dark-card">
+     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-7xl mx-auto py-10">
       {data.map((item) => (
-        <div className="relative w-[350px] h-[220px] rounded-2xl overflow-hidden shadow-lg">
+        <div className="relative  h-[220px] rounded-2xl overflow-hidden shadow-lg">
           {/* Background image */}
           <img
             src={item.bgImg}
@@ -38,7 +39,7 @@ const TopReadSellBooks = () => {
           />
 
           {/* Content */}
-          <div className="absolute top-0 h-full z-10 text-white p-4 flex flex-col space-y-8 bg-[#00000076]">
+          <div className="absolute top-0 w-full h-full z-10 text-white p-4 flex flex-col space-y-8 bg-[#00000076]">
             <div className="flex justify-between items-start">
               <span className="bg-white text-red-500  font-semibold px-2 py-1 rounded-full">
                 {item.read}
@@ -63,6 +64,7 @@ const TopReadSellBooks = () => {
         </div>
       ))}
     </div>
+   </div>
   );
 };
 
